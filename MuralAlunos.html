@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorial Escola</title>
+    <style>
+        :root {
+            --azul-fundo: #EDF1FD;
+            --azul-barra: #BFD0EA;
+            --azul-texto: #6686BA;
+            --rosa-orkut: #FF0084;
+        }
+
+        body {
+            background-color: var(--azul-fundo);
+            color: #333;
+            font-family: Verdana, Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+        }
+
+        header {
+            background-color: #FFF;
+            border-bottom: 2px solid var(--azul-barra);
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 { color: var(--rosa-orkut); font-size: 24px; margin: 0; }
+
+        .container {
+            width: 60%;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 15px;
+        }
+
+        nav {
+            background-color: var(--azul-barra);
+            padding: 15px;
+            padding-right: 8px;
+	    padding-left: 8px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        nav a {
+            display: block;
+            color: #000;
+            text-decoration: none;
+            padding: 8px 0;
+            font-size: 12px;
+            border-bottom: 1px solid #FFF;
+        }
+
+        nav a:hover { color: var(--rosa-orkut); }
+
+        main {
+            background-color:#F9FAFF;
+            border: 1px solid var(--azul-barra);
+            border-radius: 10px;
+            padding: 100px;
+		
+        }
+
+        .secao-titulo {
+            background-color: var(--azul-barra);
+            color: #000;
+            padding: 10px 140px;
+            font-weight: bold;
+            margin: -70px 0 20px 0;
+        }
+
+        /* --- BOTÃO DE RECADOS (Destaque) --- */
+        .btn-recado {
+            background-color: #4CAF50; /* Verde para destacar */
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 50px;
+            border: 3px solid #FFF;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-recado:hover {
+            background-color: var(--rosa-orkut);
+            transform: scale(1.05);
+        }
+
+        /* --- ESTILO DOS SCRAPS (RECADOS) --- */
+        .scrap-card {
+            background-color: #F9FAFF;
+            border: 1px solid #E0E7F1;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .scrap-foto {
+            width:  60px;
+            height: 60px;
+            border: 1px solid #CCC;
+            object-fit: cover;
+        }
+
+        .scrap-texto {
+            font-size: 12px;
+        }
+
+        .scrap-autor {
+            color: var(--azul-texto);
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        footer { text-align: center; font-size: 11px; margin-top: 30px; color: var(--azul-texto); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="font-size: 30px; font-family: Castellar, Arial, sans-serif;color:#6686BA;">🏛 Memorial</h1>
+	<h1 style="font-size: 50px;  font-family: Ubuntu, Arial, sans-serif;">Severiano Nunes</h1>
+    </header>
+
+    <div class="container">
+        <nav>
+            <center><img src="escola.jpg" style="border-radius: 50%; border: 5px solid #FFF;margin-bottom:10px;"></center>
+            
+             <a href="#inicio">Página Inicial</a>
+            <a href="file:///C:/Users/Administrador/Desktop/muralFotos.html">👨🏻‍🎓 ex-Alunos  </a>
+	    <a href="file:///C:/Users/Administrador/Desktop/MuralProfessores.html">👨🏻‍🏫 Professores </a>
+            <a href="file:///C:/Users/Administrador/Desktop/Recados.html#inicio">📩 Recados </a>
+	    <a href="#recados">🎬  Videos </a>
+	    <a href="#recados">📌  Eventos </a>
+        </nav>
+
+        <main>
+            
+
+            <section id="mural">
+                <div class="secao-titulo">Mural de Fotos</div>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <div style="text-align: center; border: 1px solid #BFD0EA; padding: 5px;">
+                <img src="mfoto.jpeg" style="border: 2px solid #FFF; width:400px; height:300px;"> 
+		<span style="font-size: 12px; font-weight: ;margin-top:5px; color:black;">  Nome:Samuel Júnior | Serie: 3°Ano | Ano: 2007</span>                        
+                 </div>
+             
+
+
+
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <div style="text-align: center; border: 1px solid #BFD0EA; padding: 5px;">
+                <img src="cesa.jpg" style="border: 2px solid #FFF; width:400px; height:300px;"> 
+		<span style="font-size: 12px; font-weight: ;margin-top:150px;"> Nome: Cesa Dirceu | Serie: 8° | Ano Ano: 2000</span>                        
+                    </div>
+               
+
+
+              
+            </section>
+               
+		
+                </div>
+            
+                
+        </main>
+    </div>
+
+    <footer>
+        <p>2026 - Memorial Escolar Retro | "O tempo passa, a amizade fica"</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorial Escola</title>
+    <style>
+        :root {
+            --azul-fundo: #EDF1FD;
+            --azul-barra: #BFD0EA;
+            --azul-texto: #6686BA;
+            --rosa-orkut: #FF0084;
+        }
+
+        body {
+            background-color: var(--azul-fundo);
+            color: #333;
+            font-family: Verdana, Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+        }
+        
+	/*--------------------------------------------------------lconteiner titulo do memorial */
+        header {
+            background-color: #FFF;
+            border-bottom: 2px solid var(--azul-barra);
+	    border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 { color: var(--rosa-orkut); font-size: 24px; margin: 0; }
+
+
+	/*--------------------------------------------------------lagura da conteiner do recado */
+        .container {
+            width: 95%;
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 15px;
+        }
+
+
+        nav {
+            background-color: var(--azul-barra);
+            padding: 15px;
+	    padding-right: 8px;
+	    padding-left: 8px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        nav a {
+            display: block;
+            color: #000;
+            text-decoration: none;
+            padding: 8px 0;
+            font-size: 12px;
+            border-bottom: 1px solid #FFF;
+        }
+
+        nav a:hover { color: var(--rosa-orkut); }
+
+        main {
+            background-color: #FFF;
+            border: 1px solid var(--azul-barra);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .secao-titulo {
+            background-color: var(--azul-barra);
+            font-size: 20px;
+            color: #000;
+            padding: 5px 10px;
+            font-weight: bold;
+            margin: 10px 0 10px 0;
+        }
+
+        /* --- BOTÃO DE RECADOS (Destaque) --- */
+       
+
+        .btn-recado{
+            background-color: var(--rosa-orkut);
+            transform: scale(7.05);
+        }
+
+        /* --- ESTILO DOS SCRAPS (RECADOS) --- */
+        .scrap-card {
+            background-color: #F9FAFF;
+            border: 1px solid #E0E7F1;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .scrap-foto {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #CCC;
+            object-fit: cover;
+        }
+
+        .scrap-texto {
+            font-size: 12px;
+        }
+
+        .scrap-autor {
+            color: var(--azul-texto);
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        footer { text-align: center; font-size: 11px; margin-top: 10px; color: var(--azul-texto); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="font-size: 30px; font-family: Castellar, Arial, sans-serif;color:#6686BA;">🏛 Memorial</h1>
+	<h1 style="font-size: 50px;  font-family: Ubuntu, Arial, sans-serif;">Severiano Nunes</h1>
+    </header>
+
+    <div class="container">
+        <nav>
+            <center><img src="escola.jpg" style="border-radius: 50%; border: 5px solid white;margin-bottom:5px;"></center>
+            
+             <a href="#inicio">Página Inicial</a>
+            <a href="file:///C:/Users/Administrador/Desktop/muralFotos.html">👨🏻‍🎓 ex-Alunos  </a>
+	    <a href="file:///C:/Users/Administrador/Desktop/MuralProfessores.html">👨🏻‍🏫 Professores </a>
+            <a href="file:///C:/Users/Administrador/Desktop/Recados.html#inicio">📩 Recados </a>
+	    <a href="#recados">🎬  Videos </a>
+	    <a href="#recados">📌  Eventos </a>
+	    
+        </nav>
+
+        <main>
+            <section id="inicio">
+                <div class="secao-titulo">Recados ✍🏻</div>
+                <p style="font-size: 13px;">Todos os recados foram realmente de alunos que preencheram o nosso FORM🧾 </p>
+                
+                <center>
+                    <div style="padding: 10px; background: #f0f0f0; border: 1px dashed #666;">
+
+                        <p><b>Samuel Júnior disse:</b></p>
+                        <p style="background-color:green; width: 500px; height: 20px; color:white; border: 2px solid white; box-shadow: 3px 3px 15px rgba(0,0,0,0.2); font-size:12px; border-radius:10px; padding-top: 5px;">
+                            Obrigado a todos que compartilharm um pouco de sua História.
+                        </p>
+                        <p style="color:#FF0084;"><b>Aline Silva disse:</b></p>
+                        <p style="background-color:green; width: 500px; height: 20px; color:white; border: 2px solid white; box-shadow: 3px 3px 15px rgba(0,0,0,0.2); font-size:12px; border-radius:10px; padding-top: 5px;">
+                            Amei. Parabéns para os criadores 👍🏻
+                        </p>
+                        
+                    </div>
+                </center>
+            </section>
+
+           
+
+            
+        </main>
+    </div>
+
+    <footer>
+        <p>2026 - Memorial Escolar Retro | "O tempo passa, a amizade fica"</p>
+    </footer>
+
+</body>
+</html>
