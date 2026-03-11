@@ -20,37 +20,44 @@
             padding: 10px;
         }
         
-	/*--------------------------------------------------------lconteiner titulo do memorial */
+        /* Cabeçalho Responsivo */
         header {
             background-color: #FFF;
             border-bottom: 2px solid var(--azul-barra);
-	    border-radius: 10px;
-            padding: 10px;
+            border-radius: 10px;
+            padding: 20px 10px;
             text-align: center;
             margin-bottom: 20px;
         }
 
-        h1 { color: var(--rosa-orkut); font-size: 24px; margin: 0; }
+        .titulo-memorial { font-size: 24px; font-family: Castellar, Arial, sans-serif; color: #6686BA; margin: 0; }
+        .titulo-escola { font-size: 40px; font-family: Ubuntu, Arial, sans-serif; margin: 5px 0; }
 
-
-	/*--------------------------------------------------------lagura da conteiner do recado */
+        /* Container Principal com Grid Responsivo */
         .container {
             width: 95%;
             max-width: 1000px;
             margin: auto;
             display: grid;
-            grid-template-columns: 180px 1fr;
+            grid-template-columns: 180px 1fr; /* Layout PC */
             gap: 15px;
         }
 
-
+        /* Menu Lateral */
         nav {
             background-color: var(--azul-barra);
             padding: 15px;
-	    padding-right: 8px;
-	    padding-left: 8px;
             border-radius: 8px;
             height: fit-content;
+        }
+
+        nav img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 10px;
+            object-fit: cover;
         }
 
         nav a {
@@ -64,11 +71,13 @@
 
         nav a:hover { color: var(--rosa-orkut); }
 
+        /* Conteúdo Principal */
         main {
             background-color: #FFF;
             border: 1px solid var(--azul-barra);
             border-radius: 8px;
             padding: 20px;
+            min-width: 0; /* Evita que o conteúdo estoure o grid */
         }
 
         .secao-titulo {
@@ -76,14 +85,14 @@
             color: #000;
             padding: 5px 10px;
             font-weight: bold;
-            margin: 10px 0 10px 0;
+            margin: 10px 0;
         }
 
-        /* --- BOTÃO DE RECADOS (Destaque) --- */
+        /* Botão de Recados */
         .btn-recado {
-            background-color: #4CAF50; /* Verde para destacar */
+            background-color: #4CAF50;
             color: white;
-            padding: 15px 25px;
+            padding: 15px 20px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -94,6 +103,7 @@
             box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
             cursor: pointer;
             transition: 0.3s;
+            max-width: 100%;
         }
 
         .btn-recado:hover {
@@ -101,55 +111,59 @@
             transform: scale(1.05);
         }
 
-        /* --- ESTILO DOS SCRAPS (RECADOS) --- */
-        .scrap-card {
-            background-color: #F9FAFF;
-            border: 1px solid #E0E7F1;
-            padding: 10px;
-            margin-bottom: 10px;
-            display: flex;
-            gap: 15px;
-        }
-
-        .scrap-foto {
-            width: 60px;
-            height: 60px;
-            border: 1px solid #CCC;
-            object-fit: cover;
-        }
-
-        .scrap-texto {
-            font-size: 12px;
-        }
-
-        .scrap-autor {
-            color: var(--azul-texto);
-            font-weight: bold;
-            margin-bottom: 5px;
+        /* Imagem da Sala Ajustável */
+        .img-responsiva {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            border: 2px solid #FFF;
             display: block;
+            margin: 0 auto;
         }
 
-        footer { text-align: center; font-size: 11px; margin-top: 10px; color: var(--azul-texto); }
+        footer { text-align: center; font-size: 11px; margin-top: 20px; color: var(--azul-texto); padding-bottom: 20px; }
+
+        /* --- MEDIA QUERIES (O SEGREDO DA AUTO-AJUSTE) --- */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* Muda para uma coluna no celular */
+            }
+
+            .titulo-escola { font-size: 28px; }
+            .titulo-memorial { font-size: 18px; }
+
+            nav {
+                text-align: center;
+                order: -1; /* Mantém o menu no topo */
+            }
+
+            main {
+                padding: 15px;
+            }
+
+            .btn-recado {
+                font-size: 14px;
+                padding: 12px 15px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1 style="font-size: 30px; font-family: Castellar, Arial, sans-serif;color:#6686BA;">🏛 Memorial</h1>
-	<h1 style="font-size: 50px;  font-family: Ubuntu, Arial, sans-serif;">Severiano Nunes</h1>
+        <h1 class="titulo-memorial">🏛 Memorial</h1>
+        <h1 class="titulo-escola">Severiano Nunes</h1>
     </header>
 
     <div class="container">
         <nav>
-            <center><img src="escola.JPG" style="border-radius: 50%; border: 5px solid white;margin-bottom:5px;"></center>
-            
+            <center><img src="escola.JPG" alt="Logo Escola"></center>
             <a href="#inicio">Página Inicial</a>
-            <a href="MuralAlunos.html">👨🏻‍🎓 ex-Alunos  </a>
-	    <a href="MuralProfessores.html">👨🏻‍🏫 Professores </a>
-            <a href="Recados.html">📩 Recados </a>
-	    <a href="#recados">🎬  Videos </a>
-	    <a href="#recados">📌  Eventos </a>
-	    
+            <a href="MuralAlunos.html">👨🏻‍🎓 ex-Alunos</a>
+            <a href="MuralProfessores.html">👨🏻‍🏫 Professores</a>
+            <a href="Recados.html">📩 Recados</a>
+            <a href="#videos">🎬 Vídeos</a>
+            <a href="#eventos">📌 Eventos</a>
         </nav>
 
         <main>
@@ -158,27 +172,22 @@
                 <p style="font-size: 13px;">Este site é para quem viveu a época de ouro da nossa escola. Navegue e deixe seu rastro!</p>
                 
                 <center>
-                    <div style="padding: 20px; background: #f0f0f0; border: 1px dashed #666;">
+                    <div style="padding: 20px; background: #f0f0f0; border: 1px dashed #666; border-radius: 8px; margin: 15px 0;">
                         <p><b>Quer aparecer aqui ou deixar um recado?</b></p>
                         <a href="https://forms.gle/MPVRSMP278MDL6649" target="_blank" class="btn-recado">
-                            ✍️ DEIXAR UM RECADO / ENVIAR FOTO
+                            ✍️ DEIXAR UM RECADO
                         </a>
-                        <p style="font-size: 10px; margin-top: 10px;">(Suas informações serão revisadas e postadas pelo administrador)</p>
+                        <p style="font-size: 10px; margin-top: 10px;">(Suas informações serão revisadas pelo administrador)</p>
                     </div>
                 </center>
             </section>
 
             <section id="mural">
-                <div class="secao-titulo">Escola Estadual Senador Manuel Severiano Nunes 🌞</div>
-                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                    <div style="text-align: center; border: 1px solid #BFD0EA; padding: 5px;">
-                        <img src="sala.JPG" style="border: 2px solid #FFF;width:750px; heigth:750px;">
-                        
-                    </div>
+                <div class="secao-titulo">Nossa Escola 🌞</div>
+                <div style="text-align: center; border: 1px solid #BFD0EA; padding: 10px; background: #f9f9f9;">
+                    <img src="sala.JPG" class="img-responsiva" alt="Sala de Aula">
                 </div>
             </section>
-
-            
         </main>
     </div>
 
@@ -187,4 +196,5 @@
     </footer>
 
 </body>
-</html>
+				</html>
+				
